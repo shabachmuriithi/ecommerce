@@ -1,10 +1,11 @@
 import Header from "../shared-components/header";
-import { FaApple, FaChevronRight , FaTruckFast, FaHeadphones, FaCircleCheck} from "react-icons/fa6";
+import { FaApple, FaChevronRight , FaTruckFast, FaHeadphones, FaCircleCheck, FaPhone, FaLaptop, FaCamera, FaClock, FaHeadphones as FaHeadphonesNav, FaGamepad} from "react-icons/fa6";
 import Link from "next/link";
 import Image from "next/image";
 import Flash from "../flash-sales/flash";
 import Footer from "../shared-components/footer";
 import FlashSaleCard from "../flash-sales/flash";
+import Card from "../broswe-categories/categories";
 
 const Home = () => {
   const flashSales = [
@@ -105,29 +106,29 @@ const Home = () => {
       </div>
        
        
-       <div className="flex gap-12 mt-20 ml-20">
+       <div className="flex gap-12 mt-10 ml-20">
         <div>
-        <p className="font-bold text-2xl">Flash Sales</p>
+        <p className="font-bold text-3xl">Flash Sales</p>
         </div>
         <div className="flex gap-5">
         <div>
            <p> Days</p>
-           <p className="font-bold text-2xl">03</p>
+           <p className="font-bold text-3xl">03</p>
         </div>
         <p>:</p>
         <div>
            <p>Hours</p>
-           <p className="font-bold text-2xl">19</p>
+           <p className="font-bold text-3xl">19</p>
         </div>
         <p>:</p>
         <div>
            <p> Minutes</p>
-           <p className="font-bold text-2xl">23</p>
+           <p className="font-bold text-3xl">23</p>
         </div>
         <p>:</p>
         <div>
            <p> Seconds</p>
-           <p className="font-bold text-2xl">56</p>
+           <p className="font-bold text-3xl">56</p>
         </div>
        
         </div> 
@@ -137,8 +138,19 @@ const Home = () => {
           <FlashSaleCard key={index} {...sale} />
         ))}
       </div>
+      
+        <p className="font-bold text-3xl ml-20" >Browse by Category</p>
+      <div className="flex justify-center gap-4 p-4 bg-gray-50">
+        <Card icon={<FaPhone />} title="Phones" />
+        <Card icon={<FaLaptop />} title="Computers" />
+        <Card icon={<FaClock />} title="SmartWatch" />
+        <Card icon={<FaCamera />} title="Camera" isActive={true} />
+        <Card icon={<FaHeadphonesNav />} title="HeadPhones" />
+        <Card icon={<FaGamepad />} title="Gaming" />
+      </div>
 
-      <div className="bg-black text-white flex w-380 mt-40 ml-50 justify-around h-110">
+
+      <div className="bg-black text-white flex w-380 ml-50 justify-around h-110">
         <div className="mt-15 ml-20">
           <p className="text-green-300 mb-10">Categories</p>
           <h1 className="font-bold text-5xl mb-10">
@@ -168,7 +180,7 @@ const Home = () => {
         </div>
         <Image
           src="/images/ybl2.jpeg"
-          alt="Shopping cart"
+          alt="YBL"
           width={500}
           height={400}
           className="rounded-lg object-cover"
@@ -176,7 +188,7 @@ const Home = () => {
         />
       </div>
       <div className="flex gap-7 ml-50">
-      <div className="mt-7">
+      <div className="mt-3">
         <Image
           src="/images/ps5.jpeg"
           alt="Ps5"

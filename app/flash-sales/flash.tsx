@@ -30,9 +30,8 @@ const FlashSaleCard = ({
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
-      padding: '10px',
-      // boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
-      // position: 'relative',
+      // padding: '1px',
+      
     }}>
       <div style={{
         position: 'absolute',
@@ -40,7 +39,7 @@ const FlashSaleCard = ({
         left: '10px',
         backgroundColor: '#ff4444',
         color: 'white',
-        padding: '4px 8px',
+        // padding: '4px 8px',
         borderRadius: '4px',
         fontSize: '14px',
       }}>
@@ -55,7 +54,7 @@ const FlashSaleCard = ({
           priority
         />
       </div>
-      <h3 style={{ fontSize: '16px', margin: '10px 0', textAlign: 'center' }}>
+      <h3 style={{ fontSize: '16px', textAlign: 'center' }}>
         {title}
       </h3>
       <div style={{ display: 'flex', gap: '4px', alignItems: 'center' }}>
